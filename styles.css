@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --bg-brown: #c4c4c4;
+  --head-red: #f51010;
+  --accent-red: #f31919;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-brown);
+}
+
+* {
+  box-sizing: content-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  color: var(--head-red);
+  font-size: 3rem;
+  margin-bottom: 25px;
+}
+
+.about {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.start_btn,
+.confirm_btn {
+  background-color: var(--accent-red);
+  border: none;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1.8rem 2.6rem;
+  cursor: pointer;
+}
+
+.start_btn:active {
+  transform: scale(0.98);
+  background-color: var(--head-red);
+}
+
+/* .start_btn:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+} */
+
+.client_form {
+  display: none;
+  text-align: center;
+  width: 33%;
+}
+
+.input_fields {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.input_field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field_label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.field_input {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.3rem;
+  width: 185px;
+  max-width: 185px;
+  text-align: center;
+}
