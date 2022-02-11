@@ -3,6 +3,11 @@ const inputCode = document.querySelector(".field_input.code");
 const startBtn = document.querySelector(".start_btn");
 const confirmBtn = document.querySelector(".confirm_btn");
 const form = document.getElementById("client_form");
+const loader = document.querySelector(".overlay");
+const spinner = document.querySelector(".spinner");
+const confirmationPage = document.querySelector(".confirmation");
+const finishOnStartBtn = document.querySelector(".finish_btn.go_1");
+const finishOnPackegeBtn = document.querySelector(".finish_btn.go_2");
 
 // Start
 startBtn.addEventListener("click", () => {
@@ -31,5 +36,41 @@ confirmBtn.addEventListener("click", () => {
 
   if (numberError || codeError) {
     alert(`Numer telefonu: 11 characters\nKod odbioru: 4 characters`);
+  } else {
+    fakeRequestCheck();
   }
 });
+
+// Inputs validation success, final page
+function showSuccess() {
+  console.log("ok");
+  confirmationPage.classList.add("active");
+}
+
+// Inputs validation success, loading
+function fakeRequestCheck() {
+  loader.classList.toggle("deactivated");
+  setTimeout(() => {
+    spinner.classList.add("hidden");
+    clearInputFields();
+    showSuccess();
+  }, 1000);
+}
+
+// Finish & go on start page
+finishOnStartBtn.addEventListener("click", () => {
+  loader.classList.toggle("deactivated");
+  startBtn.style.display = "block";
+  form.style.display = "none";
+});
+
+// Finish & get more packages
+finishOnPackegeBtn.addEventListener("click", () => {
+  loader.classList.toggle("deactivated");
+});
+
+// Clear all inputs
+function clearInputFields() {
+  inputNum.value = "";
+  inputCode.value = "";
+}

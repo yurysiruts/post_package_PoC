@@ -67,11 +67,6 @@ body {
   background-color: var(--head-red);
 }
 
-/* .start_btn:disabled {
-  opacity: 0.8;
-  cursor: not-allowed;
-} */
-
 .client_form {
   display: none;
   text-align: center;
@@ -104,4 +99,57 @@ body {
   width: 185px;
   max-width: 185px;
   text-align: center;
+}
+
+/* PopUp */
+.confirmation {
+  /* display: none; */
+  opacity: 0;
+  width: 380px;
+  border: 2px solid #000;
+  background-color: var(--bg-brown);
+  padding: 30px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: all 0.2s ease;
+  z-index: 20;
+}
+
+.confirmation.active {
+  /* display: block; */
+  opacity: 1;
+  transition: all 0.2s ease;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 20;
+}
+
+.conf_message {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.conf_text {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.conf_btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.finish_btn {
+  background-color: var(--accent-red);
+  border: none;
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  cursor: pointer;
+  max-width: 150px;
 }

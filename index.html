@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./spinner.css" />
     <title>Envelo Project</title>
+    <noscript>Turn On JavaScript</noscript>
   </head>
   <body>
     <div class="container">
@@ -46,6 +48,29 @@
         </div>
         <button type="button" class="confirm_btn">Odbierz paczkę</button>
       </form>
+    </div>
+
+    <div class="overlay deactivated">
+      <div class="spinner">
+        <div class="lds-facebook">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="confirmation">
+        <h2 class="conf_message">Paczka odebrana!</h2>
+        <div class="conf_text">
+          <p>
+            Zrobileś to w czasie 10 secund! <br />
+            Czy możemy zrobić dla Ciebie coś jeszcze?
+          </p>
+        </div>
+        <div class="conf_btns">
+          <div class="finish_btn go_1">To wszystko na dziś</div>
+          <div class="finish_btn go_2">Odbierz kolejną paczkę</div>
+        </div>
+      </div>
     </div>
 
     <script src="./app.js"></script>
